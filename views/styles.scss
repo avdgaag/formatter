@@ -1,0 +1,125 @@
+@import 'bourbon';
+
+$size:  14px;
+$line:  20px;
+$color: #0071BC;
+
+body {
+    background-color: #fff;
+    border-top:       10px solid $color;
+    font-family:      $helvetica;
+    font-size:        $size;
+    line-height:      $line;
+    margin:           0;
+    padding:          0 $line $line;
+}
+
+a {
+    color: $color;
+
+    &:visited {
+        color: $color;
+    }
+
+    &:hover {
+        color: lighten($color, 5%);
+    }
+
+    &:focus, &:active {
+        color: lighten($color, 10%);
+    }
+}
+
+#title {
+    background-color: #f3f3f3;
+    border-bottom:    1px solid #eee;
+    color:            $color;
+    margin:           0 ($line * -1) $line;
+    padding:          $line;
+    text-shadow:      2px 2px 1px #fff;
+
+    @include clearfix;
+
+    h1, h2 {
+        display: inline;
+        margin: 0;
+        vertical-align: text-bottom;
+    }
+
+    h1 {
+        line-height: $line * 1.5;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    h2 {
+        font-size: $size;
+        font-weight: normal;
+        margin-left: $line;
+        color: darken($color, 25%);
+    }
+}
+
+textarea {
+    @include box-sizing(border-box);
+    font-size:   $size;
+    line-height: $line;
+    padding:     $line;
+    width:       100%;
+}
+
+button {
+    @include button(simple, $color);
+}
+
+#tabs {
+    background-color: #eee;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+    margin: ($line * -1);
+    margin-bottom: $line;
+    list-style: none;
+    padding: ($line / 2) $line;
+
+    li {
+        @include button(simple, #ddd);
+        margin-right: 5px;
+        padding: 1px 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#preview {
+    font-family: $georgia;
+
+    h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
+        font-weight: normal;
+        margin: $line 0;
+    }
+    
+    h1 {
+        margin-bottom: $line * 2;
+    }
+
+    h2 {
+        margin-top: $line * 2;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-family: $helvetica;
+        font-size: $size;
+        margin: 0 0 ($line * -1) 0;
+    }
+
+    blockquote {
+        margin: 0 $line;
+        font-style: italic;
+    }
+}
+

@@ -1,0 +1,23 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title Formatter
+    %link{ rel: 'stylesheet', href: '/styles.css' }
+  %body
+    #page
+      %header#title
+        %hgroup
+          %h1
+            %a{ href: '/', rel: 'home' } Formatter
+          %h2
+            Filter text through
+            %a{ rel: 'external', href: 'http://kramdown.rubyforge.org' } Kramdown
+            ,
+            %a{ rel: 'external', href: 'http://coderay.rubychan.de' } CodeRay
+            ,
+            %a{ rel: 'external', href: 'http://daringfireball.net/projects/smartypants' } SmartyPants
+            and 
+            %a{ rel: 'external', href: 'http://avdgaa.github.com/typogruby' } Typogruby
+      = yield
+    %script{ src: '/lib.js' }
