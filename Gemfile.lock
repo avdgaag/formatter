@@ -15,7 +15,7 @@ GEM
     haml (3.1.6)
     kramdown (0.13.7)
     multi_json (1.3.6)
-    rack (1.4.1)
+    rack (1.6.12)
     rack-protection (1.2.0)
       rack
     rubypants (0.2.0)
